@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Подготовительные курсы по математике и логике для школьников 5–6 классов и подготовка к НИШ.">
+    <meta name="description" content="EduStart — подготовка по математике и логике для 5–6 классов и НИШ.">
     <title>EduStart — Математика и логика</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,15 +11,19 @@
 
 <header class="header">
     <div class="container header-inner">
-        <a href="#" class="logo">Edu<span>Start</span></a>
 
-        <nav class="nav">
+        <a href="#" class="logo">
+            Edu<span>Start</span>
+        </a>
+
+        <nav class="desktop-nav">
             <a href="#program" data-i18n="navProgram">Программа</a>
             <a href="#advantages" data-i18n="navAdvantages">Преимущества</a>
             <a href="#application" data-i18n="navApplication">Заявка</a>
         </nav>
 
-        <div class="header-actions">
+        <div class="header-right">
+
             <div class="language-switcher">
                 <button class="lang-btn active" data-lang="ru">RU</button>
                 <button class="lang-btn" data-lang="kz">KZ</button>
@@ -28,22 +32,43 @@
             <a href="#application" class="header-button" data-i18n="navButton">
                 Записаться
             </a>
-        </div>
 
-        <button class="menu-button" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <button class="menu-button" id="menuButton" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
     </div>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobileMenu">
+
         <a href="#program" data-i18n="navProgram">Программа</a>
-        <a href="#advantages" data-i18n="navAdvantages">Преимущества</a>
-        <a href="#application" data-i18n="navApplication">Заявка</a>
-        <a href="#application" class="mobile-menu-button" data-i18n="navButton">
+
+        <a href="#advantages" data-i18n="navAdvantages">
+            Преимущества
+        </a>
+
+        <a href="#application" data-i18n="navApplication">
+            Заявка
+        </a>
+
+        <a href="#application"
+           class="mobile-button"
+           data-i18n="navButton">
             Записаться
         </a>
+
+        <div class="mobile-language">
+            <span data-i18n="language">Язык</span>
+
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="kz">KZ</button>
+            </div>
+        </div>
+
     </div>
 </header>
 
@@ -53,32 +78,39 @@
     <div class="container hero-grid">
 
         <div class="hero-content reveal">
+
             <div class="badge" data-i18n="badge">
                 Математика • Логика
             </div>
 
             <h1>
-                <span data-i18n="heroTitle">Сенімді бастау</span><br>
-                <span data-i18n="heroClass">5–6 сыныпқа</span><br>
-                <span data-i18n="heroNish">және НЗМ-ге дайындық</span>
+                <span data-i18n="heroTitle">Уверенный старт</span><br>
+                <span data-i18n="heroClass">в 5–6 классе</span><br>
+                <span data-i18n="heroNish">и подготовка к НИШ</span>
             </h1>
 
             <p class="hero-text" data-i18n="heroText">
-                Системная подготовка по математике и логике для школьников.
-                Развиваем знания, мышление и уверенность при решении задач.
+                Системная подготовка по математике и логике
+                для школьников. Развиваем знания, мышление
+                и уверенность при решении задач.
             </p>
 
             <div class="hero-buttons">
-                <a href="#application" class="button button-primary" data-i18n="heroButton">
+                <a href="#application"
+                   class="button button-primary"
+                   data-i18n="heroButton">
                     Оставить заявку
                 </a>
 
-                <a href="#program" class="button button-secondary" data-i18n="heroMore">
+                <a href="#program"
+                   class="button button-secondary"
+                   data-i18n="heroMore">
                     Подробнее
                 </a>
             </div>
 
             <div class="stats">
+
                 <div class="stat">
                     <strong>5–6</strong>
                     <span data-i18n="statClass">класс</span>
@@ -93,10 +125,13 @@
                     <strong>2</strong>
                     <span data-i18n="statSubjects">направления</span>
                 </div>
+
             </div>
+
         </div>
 
         <div class="hero-card reveal">
+
             <div class="hero-card-top">
                 <span class="mini-label" data-i18n="cardLabel">
                     Что развиваем
@@ -112,37 +147,48 @@
             </h3>
 
             <p data-i18n="cardText">
-                Не просто запоминаем формулы, а учимся понимать задачи
-                и находить решение самостоятельно.
+                Не просто запоминаем формулы, а учимся понимать
+                задачи и находить решение самостоятельно.
             </p>
 
             <div class="card-line"></div>
 
             <div class="card-points">
+
                 <div>
                     <span>✓</span>
-                    <p data-i18n="point1">Математическое мышление</p>
+                    <p data-i18n="point1">
+                        Математическое мышление
+                    </p>
                 </div>
 
                 <div>
                     <span>✓</span>
-                    <p data-i18n="point2">Логика и анализ</p>
+                    <p data-i18n="point2">
+                        Логика и анализ
+                    </p>
                 </div>
 
                 <div>
                     <span>✓</span>
-                    <p data-i18n="point3">Уверенность в задачах</p>
+                    <p data-i18n="point3">
+                        Уверенность в задачах
+                    </p>
                 </div>
+
             </div>
+
         </div>
 
     </div>
 </section>
 
 <section class="program section" id="program">
+
     <div class="container">
 
         <div class="section-heading reveal">
+
             <span class="section-label" data-i18n="programLabel">
                 ПРОГРАММА
             </span>
@@ -152,14 +198,16 @@
             </h2>
 
             <p data-i18n="programText">
-                Занятия направлены на школьную базу, развитие мышления
-                и подготовку к вступительным испытаниям НИШ.
+                Занятия направлены на школьную базу, развитие
+                мышления и подготовку к вступительным испытаниям НИШ.
             </p>
+
         </div>
 
         <div class="program-grid">
 
             <article class="program-card reveal">
+
                 <div class="program-number">01</div>
 
                 <div class="program-icon">∑</div>
@@ -169,8 +217,8 @@
                 </h3>
 
                 <p data-i18n="mathText">
-                    Закрепляем школьную программу и учимся решать задачи
-                    разного уровня сложности.
+                    Закрепляем школьную программу и учимся
+                    решать задачи разного уровня сложности.
                 </p>
 
                 <ul>
@@ -179,9 +227,11 @@
                     <li data-i18n="math3">Геометрические основы</li>
                     <li data-i18n="math4">Нестандартные задачи</li>
                 </ul>
+
             </article>
 
             <article class="program-card reveal">
+
                 <div class="program-number">02</div>
 
                 <div class="program-icon">◎</div>
@@ -201,16 +251,21 @@
                     <li data-i18n="logic3">Закономерности</li>
                     <li data-i18n="logic4">Задачи на мышление</li>
                 </ul>
+
             </article>
 
         </div>
+
     </div>
+
 </section>
 
 <section class="advantages section" id="advantages">
+
     <div class="container">
 
         <div class="section-heading reveal">
+
             <span class="section-label" data-i18n="advantagesLabel">
                 ПОЧЕМУ МЫ
             </span>
@@ -218,11 +273,13 @@
             <h2 data-i18n="advantagesTitle">
                 Подготовка с пониманием
             </h2>
+
         </div>
 
         <div class="advantages-grid">
 
             <article class="advantage-card reveal">
+
                 <div class="advantage-icon">01</div>
 
                 <h3 data-i18n="advantage1Title">
@@ -233,9 +290,11 @@
                     Объясняем сложные темы простым языком,
                     чтобы ребёнок действительно понимал материал.
                 </p>
+
             </article>
 
             <article class="advantage-card reveal">
+
                 <div class="advantage-icon">02</div>
 
                 <h3 data-i18n="advantage2Title">
@@ -243,12 +302,14 @@
                 </h3>
 
                 <p data-i18n="advantage2Text">
-                    Больше задач и практики — меньше механического
-                    заучивания.
+                    Больше задач и практики — меньше
+                    механического заучивания.
                 </p>
+
             </article>
 
             <article class="advantage-card reveal">
+
                 <div class="advantage-icon">03</div>
 
                 <h3 data-i18n="advantage3Title">
@@ -256,19 +317,24 @@
                 </h3>
 
                 <p data-i18n="advantage3Text">
-                    Развиваем навыки, которые необходимы для решения
+                    Развиваем навыки, необходимые для решения
                     сложных заданий и вступительной подготовки.
                 </p>
+
             </article>
 
         </div>
+
     </div>
+
 </section>
 
 <section class="application section" id="application">
+
     <div class="container application-grid">
 
         <div class="application-info reveal">
+
             <span class="section-label light" data-i18n="applicationLabel">
                 ЗАПИСЬ
             </span>
@@ -284,21 +350,29 @@
             </p>
 
             <div class="contact-info">
+
                 <div>
                     <span data-i18n="phoneLabel">Телефон</span>
-                    <a href="tel:+77000000000">+7 700 000 00 00</a>
+                    <a href="tel:+77000000000">
+                        +7 700 000 00 00
+                    </a>
                 </div>
 
                 <div>
                     <span data-i18n="emailLabel">Почта</span>
-                    <a href="mailto:hello@edustart.kz">hello@edustart.kz</a>
+                    <a href="mailto:hello@edustart.kz">
+                        hello@edustart.kz
+                    </a>
                 </div>
+
             </div>
+
         </div>
 
-        <form class="application-form reveal" id="applicationForm">
+        <form class="application-form" id="applicationForm">
 
             <div class="form-group">
+
                 <label for="studentName" data-i18n="studentName">
                     Имя ученика
                 </label>
@@ -311,9 +385,11 @@
                     data-placeholder="studentPlaceholder"
                     required
                 >
+
             </div>
 
             <div class="form-group">
+
                 <label for="parentName" data-i18n="parentName">
                     Имя родителя
                 </label>
@@ -326,9 +402,11 @@
                     data-placeholder="parentPlaceholder"
                     required
                 >
+
             </div>
 
             <div class="form-group">
+
                 <label for="phone" data-i18n="phone">
                     Телефон
                 </label>
@@ -340,51 +418,73 @@
                     placeholder="+7 (___) ___-__-__"
                     required
                 >
+
             </div>
 
             <div class="form-group">
+
                 <label for="grade" data-i18n="grade">
                     Класс
                 </label>
 
                 <select id="grade" name="grade" required>
+
                     <option value="" data-i18n="chooseGrade">
                         Выберите класс
                     </option>
 
                     <option value="5">5</option>
                     <option value="6">6</option>
+
                 </select>
+
             </div>
 
             <div class="subjects">
+
                 <span data-i18n="subjects">
                     Направления
                 </span>
 
                 <div class="subject-tags">
-                    <span data-i18n="subjectMath">Математика</span>
-                    <span data-i18n="subjectLogic">Логика</span>
+
+                    <span data-i18n="subjectMath">
+                        Математика
+                    </span>
+
+                    <span data-i18n="subjectLogic">
+                        Логика
+                    </span>
+
                 </div>
+
             </div>
 
             <label class="privacy-check">
+
                 <input type="checkbox" required>
+
                 <span>
                     <span data-i18n="privacyAgree">
                         Я согласен с
                     </span>
-                    <a href="privacy.html" data-i18n="privacyLink">
+
+                    <a href="privacy.html"
+                       data-i18n="privacyLink">
                         политикой конфиденциальности
                     </a>
                 </span>
+
             </label>
 
-            <button type="submit" class="submit-button" data-i18n="submit">
+            <button type="submit"
+                    class="submit-button"
+                    data-i18n="submit">
                 Отправить заявку
             </button>
 
             <div class="success-message" id="successMessage">
+
                 <strong data-i18n="successTitle">
                     Заявка отправлена
                 </strong>
@@ -392,18 +492,23 @@
                 <span data-i18n="successText">
                     Мы свяжемся с вами в ближайшее время.
                 </span>
+
             </div>
 
         </form>
+
     </div>
+
 </section>
 
 </main>
 
 <footer class="footer">
+
     <div class="container footer-top">
 
         <div>
+
             <a href="#" class="logo footer-logo">
                 Edu<span>Start</span>
             </a>
@@ -411,25 +516,46 @@
             <p data-i18n="footerText">
                 Математика и логика для уверенного старта.
             </p>
+
         </div>
 
         <div class="footer-links">
-            <a href="#program" data-i18n="navProgram">Программа</a>
-            <a href="#advantages" data-i18n="navAdvantages">Преимущества</a>
-            <a href="#application" data-i18n="navApplication">Заявка</a>
+
+            <a href="#program" data-i18n="navProgram">
+                Программа
+            </a>
+
+            <a href="#advantages" data-i18n="navAdvantages">
+                Преимущества
+            </a>
+
+            <a href="#application" data-i18n="navApplication">
+                Заявка
+            </a>
+
             <a href="privacy.html" data-i18n="privacyLink">
                 Политика конфиденциальности
             </a>
+
         </div>
 
     </div>
 
     <div class="container footer-bottom">
-        <span>© <span id="year"></span> EduStart</span>
-        <span data-i18n="footerRights">Все права защищены</span>
+
+        <span>
+            © <span id="year"></span> EduStart
+        </span>
+
+        <span data-i18n="footerRights">
+            Все права защищены
+        </span>
+
     </div>
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

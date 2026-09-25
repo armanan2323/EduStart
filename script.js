@@ -4,6 +4,7 @@ const translations = {
         navAdvantages: "Преимущества",
         navApplication: "Заявка",
         navButton: "Записаться",
+        language: "Язык",
 
         badge: "Математика • Логика",
 
@@ -55,7 +56,7 @@ const translations = {
         advantage2Text: "Больше задач и практики — меньше механического заучивания.",
 
         advantage3Title: "Подготовка к НИШ",
-        advantage3Text: "Развиваем навыки, которые необходимы для решения сложных заданий и вступительной подготовки.",
+        advantage3Text: "Развиваем навыки, необходимые для решения сложных заданий и вступительной подготовки.",
 
         applicationLabel: "ЗАПИСЬ",
         applicationTitle: "Готовы начать?",
@@ -94,6 +95,7 @@ const translations = {
         navAdvantages: "Артықшылықтар",
         navApplication: "Өтінім",
         navButton: "Жазылу",
+        language: "Тіл",
 
         badge: "Математика • Логика",
 
@@ -183,12 +185,14 @@ const translations = {
 const languageButtons = document.querySelectorAll(".lang-btn");
 const translatableElements = document.querySelectorAll("[data-i18n]");
 const placeholderElements = document.querySelectorAll("[data-placeholder]");
+
 const form = document.getElementById("applicationForm");
 const successMessage = document.getElementById("successMessage");
 const phoneInput = document.getElementById("phone");
+
 const header = document.querySelector(".header");
-const menuButton = document.querySelector(".menu-button");
-const mobileMenu = document.querySelector(".mobile-menu");
+const menuButton = document.getElementById("menuButton");
+const mobileMenu = document.getElementById("mobileMenu");
 
 function setLanguage(language) {
     const dictionary = translations[language];
@@ -216,7 +220,8 @@ function setLanguage(language) {
         );
     });
 
-    document.documentElement.lang = language === "kz" ? "kk" : "ru";
+    document.documentElement.lang =
+        language === "kz" ? "kk" : "ru";
 
     localStorage.setItem("edustart-language", language);
 }
@@ -227,20 +232,30 @@ languageButtons.forEach((button) => {
     });
 });
 
-const savedLanguage = localStorage.getItem("edustart-language") || "ru";
+const savedLanguage =
+    localStorage.getItem("edustart-language") || "ru";
+
 setLanguage(savedLanguage);
 
 window.addEventListener("scroll", () => {
-    header.classList.toggle("scrolled", window.scrollY > 20);
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 20
+    );
 });
 
 menuButton.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
+    const isOpen = mobileMenu.classList.toggle("open");
+
+    menuButton.classList.toggle("active", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
 });
 
 document.querySelectorAll(".mobile-menu a").forEach((link) => {
     link.addEventListener("click", () => {
         mobileMenu.classList.remove("open");
+        menuButton.classList.remove("active");
+        document.body.classList.remove("menu-open");
     });
 });
 
@@ -294,7 +309,8 @@ form.addEventListener("submit", (event) => {
     }, 5000);
 });
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
     (entries) => {
@@ -314,4 +330,5 @@ revealElements.forEach((element) => {
     observer.observe(element);
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+    new Date().getFullYear();
